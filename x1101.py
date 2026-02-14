@@ -344,7 +344,8 @@ if __name__ == "__main__":
         subprocess.run(f"wget -q {import_config} -O {ui}/config.json", shell=True)
     
     if args.hub_token:
-      subprocess.run(f"mkdir -p {ui}/x1101 && wget -q {secret} -O {ui}/x1101/sd-hub-token.json", shell=True)
+      subprocess.run(f"mkdir -p {ui}/x1101/extensions && cd {ui}/x1101/extensions && git clone https://github.com/basedholychad/sd-hub-old ", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+      subprocess.run(f"wget -q {secret} -O {ui}/x1101/extensions/sd-hub/.sd-hub-token.json", shell=True)
         
     if args.ngrok_token:
         ngrok = f"--ngrok {ngrok_token}"
