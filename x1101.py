@@ -29,7 +29,7 @@ def progress_bar2():
 def run_subprocesses_f():
     global progress_done
     if not os.path.exists("x1101"):
-        subprocess.run("pip install -q git+https://github.com/DEX-1101/colablib", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run("pip install -q git+https://github.com/basedholychad/colablib", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         subprocess.run("apt -y install -qq aria2", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         subprocess.run("pip install colorama wandb==0.19.9", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         subprocess.run("pip install trash-cli && trash-put /opt/conda/lib/python3.10/site-packages/aiohttp*", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -294,7 +294,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # variable
-    args.req = "https://github.com/DEX-1101/sd-webui-notebook/raw/main/res/req.txt"
+    args.req = "https://github.com/basedholychad/x1101-old/raw/main/req.txt"
     api_key          = args.civitai_api
     pastebin_url     = args.pastebin
     hf_token         = args.hf_token
